@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Star Puzzle 샘플 이미지</title><desc id="desc">보라색 밤하늘과 별 모양의 추상 게임 이미지</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#222945"/><stop offset="1" stop-color="#765fe9"/></linearGradient><radialGradient id="glow"><stop stop-color="#fff7b0" stop-opacity=".9"/><stop offset="1" stop-color="#fff7b0" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1280" height="720" fill="url(#bg)"/><circle cx="900" cy="230" r="210" fill="url(#glow)"/><g fill="#fff" opacity=".7"><circle cx="190" cy="150" r="6"/><circle cx="340" cy="260" r="9"/><circle cx="1080" cy="130" r="5"/><circle cx="1040" cy="410" r="8"/></g>
+  <path d="M870 155l28 58 64 9-46 45 11 64-57-30-57 30 11-64-46-45 64-9z" fill="#ffe775"/>
+  <path d="M0 535c210-85 420-22 615-67 251-58 411-13 665 35v217H0z" fill="#15192c" opacity=".72"/>
+  <text x="72" y="610" fill="#fff" font-family="Arial,sans-serif" font-size="70" font-weight="700">STAR PUZZLE</text>
+  <text x="76" y="662" fill="#cbc6ff" font-family="Arial,sans-serif" font-size="26">LOGIC PUZZLE · WEBGL</text>
+</svg>

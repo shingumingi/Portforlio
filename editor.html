@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="게임 포트폴리오 JSON 작성기">
+  <title>포트폴리오 작성기</title>
+  <link rel="stylesheet" href="css/editor.css">
+</head>
+<body>
+  <header class="editor-header">
+    <div>
+      <strong>게임 포트폴리오 작성기</strong>
+      <span>작성 내용은 이 브라우저에만 임시 저장됩니다.</span>
+    </div>
+    <div class="header-actions">
+      <label class="button secondary" for="json-import">기존 JSON 불러오기</label>
+      <input id="json-import" type="file" accept="application/json,.json" hidden>
+      <button class="button secondary" id="preview-resume" type="button">이력서 미리보기·PDF</button>
+      <button class="button primary" id="download-json" type="button">portfolio.json 다운로드</button>
+    </div>
+  </header>
+
+  <main class="editor-layout">
+    <form id="portfolio-form" novalidate>
+      <section class="form-section">
+        <div class="section-heading"><span>01</span><div><h1>기본 정보</h1><p>첫 화면에 표시되는 정보입니다.</p></div></div>
+        <div class="field-grid">
+          <label>이름<input name="name" required placeholder="김민준"></label>
+          <label>희망 직무<input name="job" required placeholder="게임 클라이언트 프로그래머"></label>
+          <label class="wide">한 줄 소개<textarea name="introduction" required rows="3" placeholder="Unity와 C#을 활용해 게임 시스템과 UI를 구현합니다."></textarea></label>
+          <label>이메일<input name="email" type="email" required placeholder="student@example.com"></label>
+          <label>GitHub 주소<input name="github" type="url" placeholder="https://github.com/student-id"></label>
+          <label>프로필 이미지 경로<input name="profileImage" value="images/profile.png"></label>
+          <label class="wide">보유 기술 <small>쉼표로 구분</small><input name="skills" placeholder="C#, Unity, GitHub, JSON"></label>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="section-heading project-heading"><span>02</span><div><h2>프로젝트</h2><p>대표작부터 순서대로 입력하세요.</p></div><button class="button secondary" id="add-project" type="button">+ 프로젝트 추가</button></div>
+        <div id="project-forms"></div>
+      </section>
+
+      <div id="validation-message" role="alert"></div>
+    </form>
+
+    <aside class="preview-panel">
+      <div class="preview-heading"><strong>실시간 미리보기</strong><span id="save-state">자동 저장됨</span></div>
+      <div id="portfolio-preview"></div>
+    </aside>
+  </main>
+
+  <template id="project-template">
+    <article class="project-form">
+      <div class="project-form-header"><h3>프로젝트 <span class="project-number"></span></h3><button type="button" class="remove-project">삭제</button></div>
+      <div class="field-grid">
+        <label>프로젝트명<input data-key="title" required></label>
+        <label>장르<input data-key="genre" placeholder="퍼즐"></label>
+        <label>플랫폼<input data-key="platform" placeholder="WebGL"></label>
+        <label>개발 기간<input data-key="period" placeholder="2026.03 ~ 2026.06"></label>
+        <label>참여 인원<input data-key="teamSize" type="number" min="1" value="1"></label>
+        <label>담당 역할<input data-key="role" required placeholder="클라이언트 프로그래밍"></label>
+        <label class="wide">프로젝트 소개<textarea data-key="description" required rows="2"></textarea></label>
+        <label class="wide">담당 기능 <small>한 줄에 하나씩 입력</small><textarea data-key="contributions" required rows="4"></textarea></label>
+        <label class="wide">문제 상황<textarea data-key="problem" rows="2"></textarea></label>
+        <label class="wide">해결 방법<textarea data-key="solution" rows="2"></textarea></label>
+        <label class="wide">결과<textarea data-key="result" rows="2"></textarea></label>
+        <label>대표 이미지 경로<input data-key="thumbnail" placeholder="images/game.jpg"></label>
+        <label>게임 실행 주소<input data-key="play" type="url"></label>
+        <label>플레이 영상 주소<input data-key="video" type="url"></label>
+        <label>GitHub 주소<input data-key="github" type="url"></label>
+        <label>문서 경로 또는 주소<input data-key="document"></label>
+      </div>
+    </article>
+  </template>
+
+  <script src="js/editor.js" defer></script>
+</body>
+</html>

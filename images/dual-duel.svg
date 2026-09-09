@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Dual Duel 샘플 이미지</title><desc id="desc">청록색 배경 위 두 장의 카드가 마주 보는 추상 게임 이미지</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#133b3a"/><stop offset="1" stop-color="#2c9b79"/></linearGradient></defs>
+  <rect width="1280" height="720" fill="url(#bg)"/><g transform="translate(360 105) rotate(-10 150 220)"><rect width="300" height="440" rx="24" fill="#f7f4e8"/><rect x="25" y="25" width="250" height="390" rx="14" fill="#253e4b"/><circle cx="150" cy="220" r="75" fill="#e4c66f"/></g><g transform="translate(650 105) rotate(10 150 220)"><rect width="300" height="440" rx="24" fill="#f7f4e8"/><rect x="25" y="25" width="250" height="390" rx="14" fill="#53384c"/><path d="M150 130l75 130H75z" fill="#e67962"/></g>
+  <rect y="565" width="1280" height="155" fill="#102826" opacity=".7"/><text x="72" y="640" fill="#fff" font-family="Arial,sans-serif" font-size="70" font-weight="700">DUAL DUEL</text><text x="75" y="682" fill="#bce7da" font-family="Arial,sans-serif" font-size="24">CARD STRATEGY · WINDOWS</text>
+</svg>
