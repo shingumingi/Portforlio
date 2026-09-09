@@ -1,57 +1,52 @@
 {
   "profile": {
-    "name": "김민준",
-    "job": "게임 클라이언트 프로그래머",
-    "introduction": "Unity와 C#을 활용해 게임 시스템과 UI를 구현합니다. 플레이 가능한 결과와 작업 문서로 개발 과정을 증명합니다.",
-    "email": "student@example.com",
-    "profileImage": "images/profile.png",
-    "resume": "resume.html",
-    "github": "https://github.com/"
+    "name": "이민기",
+    "job": "게임 QA",
+    "introduction": "Unity와 C#에 대한 이해를 바탕으로 정밀한 TC를 설계하고, 정확한 결함 원인 분석으로 게임의 완성도를 증명합니다.",
+    "email": "pettid0314@naver.com",
+    "github": "https://github.com/shingumingi/Portforlio.git",
+    "profileImage": "images/Image.jpg",
+    "resume": "resume.html"
   },
-  "skills": ["C#", "Unity", "GitHub", "JSON"],
+  "skills": [
+    "C#",
+    "Unity",
+    "GitHub",
+    "Excel"
+  ],
   "projects": [
     {
-      "id": "star-puzzle",
-      "title": "Star Puzzle",
-      "thumbnail": "images/star-puzzle.svg",
-      "description": "별 배치 규칙을 활용한 논리 퍼즐 게임입니다.",
-      "genre": "퍼즐",
-      "platform": "WebGL",
-      "period": "2026.03 ~ 2026.06",
-      "team": { "size": 4, "myRole": "클라이언트 프로그래밍" },
+      "id": "revenger",
+      "title": "Revenger",
+      "thumbnail": "images/Lobby.png",
+      "description": "경비의 눈을 피해 진입하는 잠입 액션 퍼즐 게임입니다.",
+      "genre": "어드벤처, 액션, 퍼즐",
+      "platform": "PC",
+      "period": "2025.07 ~ 2025.12",
+      "team": {
+        "size": 1,
+        "myRole": "클라이언트 프로그래밍"
+      },
       "contributions": [
-        "퍼즐 정답 판정 알고리즘 구현",
-        "힌트 및 생명 시스템 구현",
-        "JSON 기반 스테이지 데이터 구조 설계"
+        "플레이어 컨트롤러 및 벽타기 물리 시스템 구현",
+        "적 AI 순찰 및 시야각 감지 알고리즘 구현",
+        "퍼즐 메카닉, 힌트 상호작용 및 보상 데이터 연동 구현",
+        "오브젝트(문) 상태 데이터 저장 및 씬 전환 로직 구현",
+        "BGM/SFX 통합 관리 사운드 매니저 구축"
       ],
-      "problemSolving": [{
-        "problem": "새로운 스테이지를 추가할 때마다 코드를 수정해야 했습니다.",
-        "solution": "스테이지 규칙과 정답 데이터를 JSON 파일로 분리했습니다.",
-        "result": "코드 수정 없이 신규 스테이지를 추가할 수 있게 되었습니다."
-      }],
+      "problemSolving": [
+        {
+          "problem": "씬 전환 반복 발생 시 사운드 매니저 인스턴스 중복 생성으로 인한 BGM 중첩 및 예외 오류 발생\n문 상호작용 후 씬 재로드 시 개폐 상태 데이터가 비동기화되거나 초기화되는 데이터 오류 발생",
+          "solution": "싱글톤 패턴 및 DontDestroyOnLoad를 적용하여 씬 전환 시 사운드 매니저 중복 생성 방지\n데이터 저장/로드 시점의 엣지케이스를 분석하고 씬 전환 타이밍에 맞춘 상태 값 동기화 코드 작성\n코드 단의 직접적인 디버깅을 통한 예외 처리 로직 구현 및 수정 후 영향도 평가 수행",
+          "result": "씬 전환 및 데이터 저장/로드 시 예외 오류 0건 달성 및 게임 시스템 안정성 확보\nC# 코드 및 Unity 엔진 구조에 대한 이해를 바탕으로 기술적 결함 원인을 추적하는 역량 확보"
+        }
+      ],
       "links": {
-        "play": "https://example.com",
+        "play": "https://store.onstove.com/ko/games/103389",
         "video": "",
-        "github": "https://github.com/",
+        "github": "https://github.com/losieee/Revenger1.git",
         "document": "documents/project-document.html"
       }
-    },
-    {
-      "id": "dual-duel",
-      "title": "Dual Duel",
-      "thumbnail": "images/dual-duel.svg",
-      "description": "카드 조합과 선택을 중심으로 구성한 턴제 대전 게임입니다.",
-      "genre": "카드 전략",
-      "platform": "Windows",
-      "period": "2025.09 ~ 2025.12",
-      "team": { "size": 5, "myRole": "UI 및 데이터 저장" },
-      "contributions": ["덱 편집 UI 구현", "카드 데이터 저장 기능 구현", "팀 Git 브랜치 관리"],
-      "problemSolving": [{
-        "problem": "카드 목록이 변경될 때 UI가 중복 생성되었습니다.",
-        "solution": "데이터 갱신과 UI 생성을 분리하고 기존 슬롯을 재사용했습니다.",
-        "result": "중복 생성을 제거하고 덱 편집 화면의 성능을 개선했습니다."
-      }],
-      "links": { "play": "", "video": "", "github": "https://github.com/", "document": "" }
     }
   ]
 }
